@@ -8,8 +8,9 @@ def heuristic(state):
     return heuristic_values[loc] + remaining * 2
 
 def a_star_search(start_state):
-    queue = [(heuristic(start_state), 0, start_state, [])]  # f, g, state, path
+    queue = [(heuristic(start_state), 0,  [])]  # f, g, state, path
     visited = set()
+    
 
     while queue:
         f, g, state, path = heapq.heappop(queue)
